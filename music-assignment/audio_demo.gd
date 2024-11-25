@@ -25,12 +25,6 @@ func _on_button_2_button_down() -> void:
 		$AudioStreamPlayer2D2.play()	
 		pass # Replace with function body.
 	
-func _on_h_slider2_value_changed(value: float) -> void:
-	$AudioStreamPlayer2D.pitch_scale = value
-	pass
-
-
-
-
 func _on_h_slider_2_value_changed(value: float) -> void:
-	pass # Replace with function body.
+	$AudioStreamPlayer2D2.pitch_scale = value
+	pass
