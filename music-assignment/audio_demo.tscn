@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbgs5sqqdcw7p"]
+
+[ext_resource type="Script" path="res://audio_demo.gd" id="1_4n1sv"]
+[ext_resource type="AudioStream" uid="uid://gw2qrmvwp6ii" path="res://Thick_of_It_by_KSI_but_it_s_Big_Band_Jazz__Full_Version__[_YouConvert.net_].mp3" id="2_mi5nh"]
+[ext_resource type="Script" path="res://button_2.gd" id="3_vehml"]
+
+[node name="Audio_demo" type="Node2D"]
+script = ExtResource("1_4n1sv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_mi5nh")
+pitch_scale = 0.01
+
+[node name="Button" type="Button" parent="."]
+offset_left = 914.0
+offset_top = 136.0
+offset_right = 1112.0
+offset_bottom = 213.0
+text = "Play"
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 914.0
+offset_top = 242.0
+offset_right = 1114.0
+offset_bottom = 258.0
+max_value = 1.0
+step = 0.05
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 44.0
+offset_top = 136.0
+offset_right = 247.0
+offset_bottom = 226.0
+text = "Play"
+script = ExtResource("3_vehml")
+
+[node name="HSlider2" type="HSlider" parent="."]
+offset_left = 41.0
+offset_top = 232.0
+offset_right = 241.0
+offset_bottom = 256.0
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="changed" from="HSlider" to="." method="_on_h_slider_changed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
+[connection signal="value_changed" from="HSlider2" to="." method="_on_h_slider_2_value_changed"]
