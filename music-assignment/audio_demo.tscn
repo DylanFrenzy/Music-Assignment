@@ -1,55 +1,167 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbgs5sqqdcw7p"]
+[gd_scene load_steps=9 format=3 uid="uid://bbgs5sqqdcw7p"]
 
 [ext_resource type="Script" path="res://audio_demo.gd" id="1_4n1sv"]
+[ext_resource type="Texture2D" uid="uid://ccf774n6rx5vy" path="res://tuba-388989_1920.jpg" id="2_k2ia3"]
 [ext_resource type="AudioStream" uid="uid://gw2qrmvwp6ii" path="res://Thick_of_It_by_KSI_but_it_s_Big_Band_Jazz__Full_Version__[_YouConvert.net_].mp3" id="2_mi5nh"]
+[ext_resource type="AudioStream" uid="uid://dxutti54qotr0" path="res://There_Will_Never_Be_Another_You_[_YouConvert.net_].mp3" id="3_c68p3"]
 [ext_resource type="Script" path="res://button_2.gd" id="3_vehml"]
+[ext_resource type="AudioStream" uid="uid://dskgfbcu5sg53" path="res://Roger_Cicero_____Ich_atme_ein__Offizielles_Video__[_YouConvert.net_].mp3" id="5_6d5th"]
+[ext_resource type="Script" path="res://h_slider_4.gd" id="6_bpjjb"]
+[ext_resource type="AudioStream" uid="uid://xyr41sl4ytq2" path="res://Chet_Baker_-_Dancing_On_The_Ceiling_Official_Audio_[_YouConvert.net_].mp3" id="8_732pm"]
 
 [node name="Audio_demo" type="Node2D"]
 script = ExtResource("1_4n1sv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1155.0
+offset_bottom = 650.0
+texture = ExtResource("2_k2ia3")
+expand_mode = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_mi5nh")
 pitch_scale = 0.05
 
 [node name="Button" type="Button" parent="."]
-offset_left = 914.0
-offset_top = 136.0
-offset_right = 1112.0
-offset_bottom = 213.0
-text = "Play"
+offset_left = 821.0
+offset_top = 80.0
+offset_right = 1115.0
+offset_bottom = 220.0
+text = "Play Song 3"
 
 [node name="HSlider" type="HSlider" parent="."]
-offset_left = 914.0
-offset_top = 242.0
-offset_right = 1114.0
-offset_bottom = 258.0
-max_value = 1.0
+offset_left = 864.0
+offset_top = 243.0
+offset_right = 1064.0
+offset_bottom = 259.0
+min_value = 0.25
+max_value = 1.25
 step = 0.05
+value = 1.0
 metadata/_edit_use_anchors_ = true
 
+[node name="HSlider6" type="HSlider" parent="."]
+offset_left = 866.0
+offset_top = 286.0
+offset_right = 1066.0
+offset_bottom = 310.0
+min_value = -30.0
+max_value = 0.0
+step = 0.05
+script = ExtResource("6_bpjjb")
+
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_mi5nh")
+stream = ExtResource("3_c68p3")
 pitch_scale = 0.05
 bus = &"Second Song"
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 44.0
-offset_top = 136.0
-offset_right = 247.0
-offset_bottom = 226.0
-text = "Play"
+offset_left = 62.0
+offset_top = 80.0
+offset_right = 350.0
+offset_bottom = 230.0
+text = "Play Song 1"
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("3_vehml")
 
 [node name="HSlider2" type="HSlider" parent="."]
-offset_left = 41.0
-offset_top = 232.0
-offset_right = 241.0
-offset_bottom = 256.0
-max_value = 1.0
+offset_left = 94.0
+offset_top = 234.0
+offset_right = 294.0
+offset_bottom = 258.0
+min_value = 0.25
+max_value = 1.25
 step = 0.05
+value = 1.0
+
+[node name="HSlider5" type="HSlider" parent="."]
+offset_left = 101.0
+offset_top = 285.0
+offset_right = 301.0
+offset_bottom = 309.0
+min_value = -30.0
+max_value = 0.0
+step = 0.05
+script = ExtResource("6_bpjjb")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_6d5th")
+pitch_scale = 0.05
+bus = &"Third Song"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 429.0
+offset_top = 80.0
+offset_right = 723.0
+offset_bottom = 220.0
+text = "Play Song 2"
+script = ExtResource("3_vehml")
+
+[node name="HSlider3" type="HSlider" parent="."]
+offset_left = 483.0
+offset_top = 240.0
+offset_right = 683.0
+offset_bottom = 264.0
+min_value = 0.25
+max_value = 1.25
+step = 0.05
+value = 1.0
+
+[node name="HSlider4" type="HSlider" parent="."]
+offset_left = 486.0
+offset_top = 284.0
+offset_right = 686.0
+offset_bottom = 308.0
+min_value = -30.0
+max_value = 0.0
+step = 0.05
+script = ExtResource("6_bpjjb")
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_732pm")
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 61.0
+offset_top = 392.0
+offset_right = 349.0
+offset_bottom = 542.0
+text = "Play Song 4"
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_vehml")
+
+[node name="HSlider7" type="HSlider" parent="."]
+offset_left = 93.0
+offset_top = 546.0
+offset_right = 293.0
+offset_bottom = 570.0
+min_value = 0.25
+max_value = 1.25
+step = 0.05
+value = 1.0
+
+[node name="HSlider8" type="HSlider" parent="."]
+offset_left = 100.0
+offset_top = 597.0
+offset_right = 300.0
+offset_bottom = 621.0
+min_value = -30.0
+max_value = 0.0
+step = 0.05
+script = ExtResource("6_bpjjb")
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="changed" from="HSlider" to="." method="_on_h_slider_changed"]
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="HSlider6" to="." method="_on_h_slider_6_value_changed"]
 [connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
 [connection signal="value_changed" from="HSlider2" to="." method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="HSlider5" to="." method="_on_h_slider_5_value_changed"]
+[connection signal="button_down" from="Button3" to="." method="_on_button_3_button_down"]
+[connection signal="value_changed" from="HSlider3" to="." method="_on_h_slider_3_value_changed"]
+[connection signal="value_changed" from="HSlider4" to="." method="_on_h_slider_4_value_changed"]
+[connection signal="button_down" from="Button4" to="." method="_on_button_4_button_down"]
+[connection signal="value_changed" from="HSlider7" to="." method="_on_h_slider_7_value_changed"]
+[connection signal="value_changed" from="HSlider7" to="." method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="HSlider8" to="." method="_on_h_slider_8_value_changed"]
