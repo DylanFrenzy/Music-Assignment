@@ -1,6 +1,5 @@
 extends Node2D
 
-
 func _on_button_button_down() -> void:
 	if $AudioStreamPlayer2D.playing:
 		$Button.text = "Play Song 3"
@@ -10,6 +9,7 @@ func _on_button_button_down() -> void:
 		$Button.text = "Stop"
 		$AudioStreamPlayer2D.play()	
 	pass # Replace with function body.
+	
 	
 func _on_h_slider_value_changed(value: float) -> void:
 	$AudioStreamPlayer2D.pitch_scale = value
@@ -76,4 +76,6 @@ func _on_h_slider_7_value_changed(value: float) -> void:
 func _on_h_slider_8_value_changed(value: float) -> void:
 	$AudioStreamPlayer2D4.volume_db = value
 	pass # Replace with function body.
+	
+	
 	

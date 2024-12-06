@@ -1,11 +1,16 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://cdmu3asgapuun"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://cdmu3asgapuun"]
 
 [sub_resource type="AudioEffectStereoEnhance" id="AudioEffectStereoEnhance_kdjdk"]
 resource_name = "StereoEnhance"
 
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_icc5e"]
+resource_name = "SpectrumAnalyzer"
+
 [resource]
 bus/0/effect/0/effect = SubResource("AudioEffectStereoEnhance_kdjdk")
 bus/0/effect/0/enabled = false
+bus/0/effect/1/effect = SubResource("AudioEffectSpectrumAnalyzer_icc5e")
+bus/0/effect/1/enabled = true
 bus/1/name = &"Second Song"
 bus/1/solo = false
 bus/1/mute = false
