@@ -77,5 +77,15 @@ func _on_h_slider_8_value_changed(value: float) -> void:
 	$AudioStreamPlayer2D4.volume_db = value
 	pass # Replace with function body.
 	
+func _ready():
+	var folder = [1, 2, 3, 4, 5, 6]
+	for music in folder:
+		var audio_button = Tree.get("scene")
+		audio_button.music_file = music
+		add_child(audio_button)
+
+
+	
+	
 	
 	
