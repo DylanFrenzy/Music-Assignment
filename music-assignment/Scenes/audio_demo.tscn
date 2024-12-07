@@ -1,0 +1,252 @@
+[gd_scene load_steps=12 format=3 uid="uid://bbgs5sqqdcw7p"]
+
+[ext_resource type="Script" path="res://scripts/audio_demo.gd" id="1_vmu3u"]
+[ext_resource type="Texture2D" uid="uid://ccf774n6rx5vy" path="res://assets/textures/tuba-388989_1920.jpg" id="2_uj1vk"]
+[ext_resource type="Script" path="res://scripts/control.gd" id="3_v1fum"]
+[ext_resource type="AudioStream" uid="uid://gw2qrmvwp6ii" path="res://assets/music/Thick_of_It_by_KSI_but_it_s_Big_Band_Jazz__Full_Version__[_YouConvert.net_].mp3" id="4_shegc"]
+[ext_resource type="Script" path="res://scripts/h_slider_4.gd" id="5_qgbuo"]
+[ext_resource type="AudioStream" uid="uid://dxutti54qotr0" path="res://assets/music/There_Will_Never_Be_Another_You_[_YouConvert.net_].mp3" id="6_x40ya"]
+[ext_resource type="Script" path="res://scripts/button_2.gd" id="7_qo1cn"]
+[ext_resource type="AudioStream" uid="uid://dskgfbcu5sg53" path="res://assets/music/Roger_Cicero_____Ich_atme_ein__Offizielles_Video__[_YouConvert.net_].mp3" id="8_hwmce"]
+[ext_resource type="AudioStream" uid="uid://xyr41sl4ytq2" path="res://assets/music/Chet_Baker_-_Dancing_On_The_Ceiling_Official_Audio_[_YouConvert.net_].mp3" id="9_a2b01"]
+[ext_resource type="AudioStream" uid="uid://c2yj04x150m6e" path="res://assets/music/Floral_Fury_[_YouConvert.net_].mp3" id="10_fms7w"]
+[ext_resource type="AudioStream" uid="uid://c286eu4trm6t3" path="res://assets/music/Mario_Kart_Wii__Coconut_Mall_Jazz_Arrangement____insaneintherainmusic_[_YouConvert.net_].mp3" id="11_thtuu"]
+
+[node name="Audio_demo" type="Node2D"]
+script = ExtResource("1_vmu3u")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1155.0
+offset_bottom = 650.0
+texture = ExtResource("2_uj1vk")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 1150.0
+offset_bottom = 648.0
+script = ExtResource("3_v1fum")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_shegc")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 821.0
+offset_top = 80.0
+offset_right = 1115.0
+offset_bottom = 220.0
+text = "Play Song 3"
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 864.0
+offset_top = 243.0
+offset_right = 1064.0
+offset_bottom = 259.0
+min_value = 0.25
+max_value = 1.25
+step = 0.05
+value = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="HSlider6" type="HSlider" parent="."]
+offset_left = 866.0
+offset_top = 286.0
+offset_right = 1066.0
+offset_bottom = 310.0
+min_value = -30.0
+max_value = 0.0
+step = 0.05
+script = ExtResource("5_qgbuo")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_x40ya")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 62.0
+offset_top = 80.0
+offset_right = 350.0
+offset_bottom = 230.0
+text = "Play Song 1"
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("7_qo1cn")
+
+[node name="HSlider2" type="HSlider" parent="."]
+offset_left = 94.0
+offset_top = 234.0
+offset_right = 294.0
+offset_bottom = 258.0
+min_value = 0.25
+max_value = 1.25
+step = 0.05
+value = 1.0
+
+[node name="HSlider5" type="HSlider" parent="."]
+offset_left = 101.0
+offset_top = 285.0
+offset_right = 301.0
+offset_bottom = 309.0
+min_value = -30.0
+max_value = 0.0
+step = 0.05
+script = ExtResource("5_qgbuo")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_hwmce")
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 429.0
+offset_top = 80.0
+offset_right = 723.0
+offset_bottom = 220.0
+text = "Play Song 2"
+script = ExtResource("7_qo1cn")
+
+[node name="HSlider3" type="HSlider" parent="."]
+offset_left = 483.0
+offset_top = 240.0
+offset_right = 683.0
+offset_bottom = 264.0
+min_value = 0.25
+max_value = 1.25
+step = 0.05
+value = 1.0
+
+[node name="HSlider4" type="HSlider" parent="."]
+offset_left = 486.0
+offset_top = 284.0
+offset_right = 686.0
+offset_bottom = 308.0
+min_value = -30.0
+max_value = 0.0
+step = 0.05
+script = ExtResource("5_qgbuo")
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_a2b01")
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 61.0
+offset_top = 392.0
+offset_right = 349.0
+offset_bottom = 542.0
+text = "Play Song 4"
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("7_qo1cn")
+
+[node name="HSlider7" type="HSlider" parent="."]
+offset_left = 93.0
+offset_top = 546.0
+offset_right = 293.0
+offset_bottom = 570.0
+min_value = 0.25
+max_value = 1.25
+step = 0.05
+value = 1.0
+
+[node name="HSlider8" type="HSlider" parent="."]
+offset_left = 100.0
+offset_top = 597.0
+offset_right = 300.0
+offset_bottom = 621.0
+min_value = -30.0
+max_value = 0.0
+step = 0.05
+script = ExtResource("5_qgbuo")
+
+[node name="AudioStreamPlayer2D5" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(5, 321)
+stream = ExtResource("10_fms7w")
+
+[node name="Button5" type="Button" parent="."]
+offset_left = 434.0
+offset_top = 401.0
+offset_right = 728.0
+offset_bottom = 541.0
+text = "Play Song 5"
+script = ExtResource("7_qo1cn")
+
+[node name="HSlider9" type="HSlider" parent="."]
+offset_left = 488.0
+offset_top = 561.0
+offset_right = 688.0
+offset_bottom = 585.0
+min_value = 0.25
+max_value = 1.25
+step = 0.05
+value = 1.0
+
+[node name="HSlider10" type="HSlider" parent="."]
+offset_left = 491.0
+offset_top = 605.0
+offset_right = 691.0
+offset_bottom = 629.0
+min_value = -30.0
+max_value = 0.0
+step = 0.05
+script = ExtResource("5_qgbuo")
+
+[node name="AudioStreamPlayer2D6" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(757, 11)
+stream = ExtResource("11_thtuu")
+
+[node name="Button6" type="Button" parent="."]
+offset_left = 818.0
+offset_top = 403.0
+offset_right = 1106.0
+offset_bottom = 553.0
+text = "Play Song 6"
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("7_qo1cn")
+
+[node name="HSlider11" type="HSlider" parent="."]
+offset_left = 850.0
+offset_top = 557.0
+offset_right = 1050.0
+offset_bottom = 581.0
+min_value = 0.25
+max_value = 1.25
+step = 0.05
+value = 1.0
+
+[node name="HSlider12" type="HSlider" parent="."]
+offset_left = 857.0
+offset_top = 608.0
+offset_right = 1057.0
+offset_bottom = 632.0
+min_value = -30.0
+max_value = 0.0
+step = 0.05
+script = ExtResource("5_qgbuo")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button" to="Control" method="_on_button_button_down"]
+[connection signal="changed" from="HSlider" to="." method="_on_h_slider_changed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="HSlider6" to="." method="_on_h_slider_6_value_changed"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="Button2" to="Control" method="_on_button_2_button_down"]
+[connection signal="value_changed" from="HSlider2" to="." method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="HSlider5" to="." method="_on_h_slider_5_value_changed"]
+[connection signal="button_down" from="Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="Button3" to="Control" method="_on_button_3_button_down"]
+[connection signal="value_changed" from="HSlider3" to="." method="_on_h_slider_3_value_changed"]
+[connection signal="value_changed" from="HSlider4" to="." method="_on_h_slider_4_value_changed"]
+[connection signal="button_down" from="Button4" to="." method="_on_button_4_button_down"]
+[connection signal="button_down" from="Button4" to="Control" method="_on_button_4_button_down"]
+[connection signal="value_changed" from="HSlider7" to="." method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="HSlider7" to="." method="_on_h_slider_7_value_changed"]
+[connection signal="value_changed" from="HSlider8" to="." method="_on_h_slider_8_value_changed"]
+[connection signal="button_down" from="Button5" to="." method="_on_button_5_button_down"]
+[connection signal="button_down" from="Button5" to="Control" method="_on_button_5_button_down"]
+[connection signal="value_changed" from="HSlider9" to="." method="_on_h_slider_9_value_changed"]
+[connection signal="value_changed" from="HSlider10" to="." method="_on_h_slider_10_value_changed"]
+[connection signal="button_down" from="Button6" to="." method="_on_button_6_button_down"]
+[connection signal="button_down" from="Button6" to="Control" method="_on_button_6_button_down"]
+[connection signal="value_changed" from="HSlider11" to="." method="_on_h_slider_11_value_changed"]
+[connection signal="value_changed" from="HSlider12" to="." method="_on_h_slider_12_value_changed"]
