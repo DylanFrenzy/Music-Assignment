@@ -19,6 +19,15 @@ offset_bottom = 650.0
 texture = ExtResource("2_k2ia3")
 expand_mode = 1
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 1150.0
+offset_bottom = 648.0
+script = ExtResource("9_ctsib")
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_mi5nh")
 pitch_scale = 0.05
@@ -150,14 +159,8 @@ max_value = 0.0
 step = 0.05
 script = ExtResource("6_bpjjb")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("9_ctsib")
-
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button" to="Control" method="_on_button_button_down"]
 [connection signal="changed" from="HSlider" to="." method="_on_h_slider_changed"]
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="HSlider6" to="." method="_on_h_slider_6_value_changed"]
@@ -168,6 +171,7 @@ script = ExtResource("9_ctsib")
 [connection signal="value_changed" from="HSlider3" to="." method="_on_h_slider_3_value_changed"]
 [connection signal="value_changed" from="HSlider4" to="." method="_on_h_slider_4_value_changed"]
 [connection signal="button_down" from="Button4" to="." method="_on_button_4_button_down"]
-[connection signal="value_changed" from="HSlider7" to="." method="_on_h_slider_7_value_changed"]
+[connection signal="button_down" from="Button4" to="Control" method="_on_button_4_button_down"]
 [connection signal="value_changed" from="HSlider7" to="." method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="HSlider7" to="." method="_on_h_slider_7_value_changed"]
 [connection signal="value_changed" from="HSlider8" to="." method="_on_h_slider_8_value_changed"]
