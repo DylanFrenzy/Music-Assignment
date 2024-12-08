@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpc0ld2vn3up1"]
+
+[ext_resource type="Texture2D" uid="uid://2d06djgt2s3n" path="res://assets/textures/tuba-388989_1920.jpg" id="1_hxc8x"]
+[ext_resource type="Script" path="res://scripts/audio_player.gd" id="1_ujh34"]
+[ext_resource type="Script" path="res://scripts/pulse.gd" id="3_xrgf6"]
+
+[node name="AudioPlayer" type="Node2D"]
+script = ExtResource("1_ujh34")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1200.0
+offset_bottom = 650.0
+texture = ExtResource("1_hxc8x")
+expand_mode = 1
+
+[node name="Pulse" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1155.0
+offset_bottom = 650.0
+script = ExtResource("3_xrgf6")
